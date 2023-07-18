@@ -1,0 +1,15 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - "$PWD/jenkins_home:/home/baratzade/Desktop/jenkins/jenkins-data"
+    networks:
+      - net
+networks:
+  net:
+
+
