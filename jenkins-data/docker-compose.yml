@@ -9,7 +9,13 @@ services:
       - "$PWD/jenkins_home:/home/baratzade/Desktop/jenkins/jenkins-data"
     networks:
       - net
+  remote_host:
+    container_name: remote-host
+    image: remote-host
+    build:
+      context: centos7
+    networks:
+      - net
 networks:
   net:
-
 
