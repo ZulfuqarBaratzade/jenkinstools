@@ -11,6 +11,8 @@ COPY remote-key.pub /home/remote_user/.ssh/authorized_keys
 
 RUN chown remote_user:remote_user -R /home/remote_user && \
     chmod 400 /home/remote_user/.ssh/authorized_keys
+RUN yum -y install mysql
+RUN yum install awscli -y
 
 RUN ssh-keygen -A
 
